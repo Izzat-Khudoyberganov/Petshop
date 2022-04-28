@@ -52,7 +52,8 @@ section {
 .header {
   width: 100%;
   position: relative;
-  background: linear-gradient(124.13deg, #F4CB38 10.97%, #F4A938 77.98%);
+  /* background: linear-gradient(124.13deg, #F4CB38 10.97%, #F4A938 77.98%); */
+  background: var(--custom__bg);
 }
 
 .flex {
@@ -318,10 +319,9 @@ section {
 }
 
 .subtitle {
-  /* margin: 0px auto; */
   font-size: 36px;
   font-family: var(--MB);
-  color: var(--white);
+  color: #fff;
   display: block;
   text-align: center;
 }
@@ -341,6 +341,7 @@ section {
   transition: .5s all;
   margin: 15px;
   border: none;
+  background: var(--custom__card);
 }
 
 
@@ -384,7 +385,7 @@ section {
 }
 
 .dark {
-  color: var(--text__color);
+  color: var(--text__color) !important;
 }
 
 .product {
@@ -408,7 +409,7 @@ section {
   height: 400px;
   width: 270px;
   border-radius: 8px;
-  background-color: var(--white);
+  background-color: var(--custom__card);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -474,6 +475,9 @@ section {
 .news {
   background-color: var(--darkwhite);
 }
+.subtitle__dark{
+  /* color: var(--text__color) !important; */
+}
 
 .special__product>.card__light {
   width: 270px;
@@ -484,6 +488,7 @@ section {
 .special__card {
   padding: 0;
   display: flex;
+  background: var(--custom__card);
 }
 
 .price__text {
@@ -555,6 +560,7 @@ section {
   height: 270px;
   position: relative;
   margin: 0 auto;
+  display: flex;
   background-color: #2E2E30;
   transition: .5s;
 }

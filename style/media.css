@@ -1,4 +1,13 @@
-@media(prefers-color-scheme:light) {}
+@media(prefers-color-scheme:light) {
+  :root{
+    --white: var(--custom__bg);
+    --text__color: #fff;
+  }
+  .logo::before{
+    content:url(../img/dark-mode__logo.png)
+  }
+
+}
 
 @media(max-width:1200px) {
   .nav-item {
@@ -131,6 +140,9 @@
   .catalog__sub{
     margin-bottom: 20px;
   }
+  /* .vet__card{
+    flex-direction: column;
+  } */
 }
 
 @media(max-width:600px) {
@@ -138,10 +150,25 @@
     padding: 15px 40px;
   }
   .info__desc{
-    margin: 15px 0;
+    margin: 15px auto;
   }
   .carousel-indicators{
     display: none;
+  }
+  .card__light{
+    margin: 10px 0;
+    height: 300px;
+    width: 250px;
+  }
+  .card__text{
+    margin-bottom: 0;
+  }
+  .btn__yellow{
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .card__img{
+    margin: 0;
   }
 }
 @media(max-width: 400px){
@@ -162,5 +189,11 @@
   }
   .main__btn{
     padding: 10px 25px;
+  }
+  .info__text{
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 20px;
+    text-align: center;
   }
 }
