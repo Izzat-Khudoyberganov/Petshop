@@ -18,6 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
     upBtn = document.querySelector('.up__btn');
 
 
+
+
   function openModal() {
     setTimeout(() => {
       modal.style.display = 'flex'
@@ -49,3 +51,13 @@ window.addEventListener('DOMContentLoaded', () => {
     document.documentElement.scrollTop = 0
   })
 })
+
+// loader
+
+setTimeout(()=>{
+  let loader = document.querySelector('.loader');
+  loader.style.opacity = '0';
+  setTimeout(()=>{
+    loader.style.display = 'none'
+  }, 2000)
+}, 3500)
