@@ -1,4 +1,4 @@
-@media(prefers-color-scheme:light) {
+@media(prefers-color-scheme:) {
   :root{
     --white: var(--custom__bg);
     --text__color: #fff;

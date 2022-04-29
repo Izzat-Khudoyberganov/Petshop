@@ -11,12 +11,14 @@
   --section__bg: #201F24;
   --white: #fff;
   --darkwhite: #FDFDFD;
+  --headerBg: linear-gradient(124.13deg, #F4CB38 10.97%, #F4A938 77.98%);
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *::after,
@@ -44,16 +46,17 @@ section {
   padding: 100px 0;
 }
 
-.swiper {
-  width: 100%;
-  overflow: hidden;
+.btn__custom-mode{
+  position: fixed;
+  z-index: 50;
+  top: 30%;
 }
 
 .header {
   width: 100%;
   position: relative;
-  /* background: linear-gradient(124.13deg, #F4CB38 10.97%, #F4A938 77.98%); */
-  background: var(--custom__bg);
+  background: var(--headerBg);
+  /* background: var(--custom__bg); */
 }
 
 .flex {
@@ -250,6 +253,14 @@ section {
   background-color: var(--yellow);
   color: var(--white);
 
+}
+
+.carousel-indicators{
+  position: static;
+  bottom: 0;
+  left: 0;
+  margin: 100px 0 0;
+  width: 100px;
 }
 
 .modal__title {
@@ -521,7 +532,7 @@ section {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: var(--text__color);
+  background-color: var(--text__color);
   color: var(--white);
   width: 270px;
   height: 50px;
@@ -562,7 +573,10 @@ section {
   margin: 0 auto;
   display: flex;
   background-color: #2E2E30;
+  /* background-color: var(--custom__card); */
   transition: .5s;
+  display: flex;
+  flex-direction: row;
 }
 
 .vet__card:nth-child(1) {
@@ -573,6 +587,7 @@ section {
 .vet__card>img {
   width: 270px;
   height: auto;
+  margin-left: 20px;
 }
 
 .vet__card-info {
@@ -750,6 +765,7 @@ section {
 
 .footer {
   background-color: var(--section__bg);
+  position: relative;
 }
 
 .footer__title {
@@ -821,8 +837,15 @@ section {
   height: 50px;
   display: block;
   text-align: center;
-  margin-left: auto;
+  position: fixed;
+  right: 50px;
+  top: 45%;
   border-radius: 2px;
+  transition: .5s;
+  opacity: 0;
+}
+.up__btn.active{
+  opacity: 1;
 }
 
 .up__btn>span::before {

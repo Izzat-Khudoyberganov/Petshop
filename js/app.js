@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', ()=>{
+window.addEventListener('DOMContentLoaded', () => {
 
   let menuBtn = document.querySelector('.header__menu'),
     nav = document.querySelector('.nav')
@@ -11,9 +11,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
   const modal = document.querySelector('.modal__window'),
     closeModal = document.querySelector('.modal__close-btn'),
-    body = document.querySelector('.header'),
+    header = document.querySelector('.header'),
     card = document.querySelectorAll('.card'),
-    specialCards = document.querySelectorAll('.card__light')
+    specialCards = document.querySelectorAll('.card__light'),
+    customModeBtn = document.querySelector('.btn__custom-mode'),
+    upBtn = document.querySelector('.up__btn');
 
 
   function openModal() {
@@ -27,15 +29,23 @@ window.addEventListener('DOMContentLoaded', ()=>{
   })
   // openModal()
 
-  function mode() {
+  customModeBtn.addEventListener('click', () => {
     let request = prompt('Rang kiriting')
-    body.style.setProperty('--custom__bg', `${request}`)
+    header.style.setProperty('--headerBg', `${request}`)
     card.forEach(element => {
       element.style.setProperty('--custom__card', `${request}`)
     });
     specialCards.forEach(element => {
       element.style.setProperty('--custom__card', `${request}`)
     })
-  }
-  mode()
+  })
+
+
+  window.addEventListener('scroll', ()=>{
+    upBtn.classList.toggle('active', window.scrollY > 500)
+  })
+  upBtn.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0
+  })
 })

@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="./style/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./style/style.css">
   <link rel="stylesheet" href="./style/media.css">
-  <title>Document</title>
+  <link rel="icon" href="./img/dog_011 (1) 1 (1).png">
+  <title>PetShop</title>
 </head>
 
 <body>
@@ -19,13 +20,14 @@
 
 
   <header class="header">
+    <button type="button" class="btn btn-primary btn__custom-mode">Custom Mode</button>
     <div class="container flex">
       <div class="logo"></div>
       <ul class="nav">
         <li class="nav-item"><a href="#!" class="nav-link">Главная</a></li>
-        <li class="nav-item"><a href="#!" class="nav-link">Каталог</a></li>
-        <li class="nav-item"><a href="#!" class="nav-link">О сервисе</a></li>
-        <li class="nav-item"><a href="#!" class="nav-link">Контакты</a></li>
+        <li class="nav-item"><a href="#catalog" class="nav-link">Каталог</a></li>
+        <li class="nav-item"><a href="#specialists" class="nav-link">О сервисе</a></li>
+        <li class="nav-item"><a href="#footer" class="nav-link">Контакты</a></li>
       </ul>
       <div class="user__action">
         <a href="tel:+7 988 777-88-77" class="phone__link link"><span class="fas fa-phone phone"></span>+7 988
@@ -47,6 +49,12 @@
             <p class="info__desc">Онлайн-магазин домашних животных подарит тебе нового друга в несколько кликов.Действуй!
             </p>
             <a href="" class="btn main__btn">Купить сейчас</a>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
             <div class="modal__window">
               <img src="./img/modal__window-img.png" alt="">
               <div class="modal__info">
@@ -66,14 +74,6 @@
           </div>
           <div class="col-lg-7 col-md-12">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-              </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src="./img/Животные.png" class="d-block w-100 slider__img" alt="...">
@@ -104,12 +104,12 @@
   <!-- Header section end -->
 
   <!-- Catalog section start -->
-  <section class="catalog">
+  <section class="catalog" id="catalog">
     <div class="container flex">
       <div class="row">
         <h2 class="subtitle catalog__sub text-light text-center">Популярные категории</h2>
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 d-flex justify-content-center">
-          <div class="card ">
+          <div class="card">
             <img src="./img/dog_011 (1) 1.png" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text text-light">Собаки</p>
@@ -152,9 +152,7 @@
     <div class="container">
       <div class="row">
         <h2 class="subtitle dark text-center">Наши продукты</h2>
-        <p class="info__text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis quam nisi adipiscing nunc.
-          Sagittis arcu cursus lorem
-          ultricies</p>
+        <p class="info__text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis quam nisi adipiscing nunc. Sagittis arcu cursus lorem ultricies</p>
       </div>
       <div class="row">
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 d-flex justify-content-center">
@@ -283,7 +281,7 @@
 
   <!-- Specialists section start -->
 
-   <!-- <section class="specialists">
+    <section class="specialists" id="specialists">
     <div class="container">
       <div class="row">
         <div class="col-xl-12 justify-content-center">
@@ -295,7 +293,7 @@
       <div class="row">
         <div class="col-xl-6">
           <div class="card vet__card d-flex">
-            <img src="./img/vet__1.png" class="img-fluid" alt="">
+            <img src="./img/vet__1.png" alt="">
             <div class="vet__card-info">
               <a href="tel:+" class="info__link"><span class="fas fa-phone"></span></a>
               <h3 class="vet__name">София Адамс</h3>
@@ -311,7 +309,7 @@
         </div>
         <div class="col-xl-6">
           <div class="card vet__card d-flex">
-            <img src="./img/vet__2.png" class="img-fluid" alt="">
+            <img src="./img/vet__2.png" alt="">
             <div class="vet__card-info">
               <a href="tel:+" class="info__link"><span class="fas fa-phone"></span></a>
               <h3 class="vet__name">Азарова Мария</h3>
@@ -327,7 +325,7 @@
         </div>
         <div class="col-xl-6">
           <div class="card vet__card d-flex">
-            <img src="./img/vet__3.png" class="img-fluid" alt="">
+            <img src="./img/vet__3.png" alt="">
             <div class="vet__card-info">
               <a href="tel:+" class="info__link"><span class="fas fa-phone"></span></a>
               <h3 class="vet__name">Брайан Адамс</h3>
@@ -343,7 +341,7 @@
         </div>
         <div class="col-xl-6">
           <div class="card vet__card d-flex">
-            <img src="./img/vet__4.png" class="img-fluid bg-light" alt="">
+            <img src="./img/vet__4.png" class="bg-light" alt="">
             <div class="vet__card-info">
               <a href="tel:+" class="info__link"><span class="fas fa-phone"></span></a>
               <h3 class="vet__name">Смирнова Ольга</h3>
@@ -359,11 +357,11 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section> 
   <!-- Specialists section end -->
 
   <!-- News section started  -->
-<!-- <section class="news">
+ <section class="news">
   <div class="container">
     <div class="row">
       <h2 class="subtitle dark">Новости животных сегодня</h2>
@@ -371,7 +369,7 @@
       ultricies</p>
     </div>
     <div class="row">
-      <div class="col-xl-7 col-lg-10 justify-content-center">
+      <div class="col-xl-7 col-lg-10 col-10 justify-content-center">
         <div class="news__card d-flex">
           <img src="./img/news__card001.png" class="news__card-img" alt="">
           <div class="news__card-info">
@@ -384,7 +382,7 @@
       </div>
       <div class="col-xl-5">
         <div class="wrapper">
-          <div class="img__box">
+          <div class="img__box col-10 col-md-8 justify-content-center">
             <div class="layer">
               <span class="far fa-search"></span>
             </div>
@@ -412,11 +410,11 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>
   <!-- News section end -->
 
   <!-- Footer section start  -->
-  <!-- <section class="footer">
+  <section class="footer" id="footer">
     <div class="container">
       <div class="row">
         <div class="col-xl-3">
@@ -497,7 +495,7 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- Footer section end -->
   <script src="./swiper/swiper.js"></script>
   <script src="./style/bootstrap/js/bootstrap.bundle.min.js"></script>
