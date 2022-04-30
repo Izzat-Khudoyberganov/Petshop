@@ -140,9 +140,55 @@
   .catalog__sub{
     margin-bottom: 20px;
   }
-  /* .vet__card{
+  
+  .vet__card {
+    padding: 10px;
     flex-direction: column;
-  } */
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+  }
+
+  .vet__card:nth-of-type(last){
+    margin-bottom: 20px;
+  }
+
+  .vet__card>img{
+    margin-left: 0;
+  }
+
+  .vet__box{
+    gap: 30px;
+  }
+
+  .vet__name,
+  .vet__position,
+  .vet__info,
+  .vet__links{
+    text-align: center;
+  }
+
+  .vet__name{
+    margin-top: 15px;
+  }
+
+  .vet__info{
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  .vet__links{
+    margin-top: 10px;
+  }
+  .card__info{
+    justify-content: center;
+  }
+  .info__text{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 110%;
+  }
 }
 
 @media(max-width:600px) {
@@ -195,5 +241,9 @@
     line-height: 100%;
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  .vet__card>img{
+    width: 200px;
   }
 }

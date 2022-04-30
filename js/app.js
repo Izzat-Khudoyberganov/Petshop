@@ -27,13 +27,15 @@ window.addEventListener('DOMContentLoaded', () => {
   function openModal() {
     setTimeout(() => {
       modal.style.display = 'flex'
+      document.body.style.overflow = 'hidden'
       modal.style.transition = '.5s'
     }, 5000);
   }
   closeModal.addEventListener('click', () => {
     modal.style.display = 'none'
+    document.body.style.overflow = 'scroll'
   })
-  // openModal()
+  openModal()
 
 
   // Custom color mode -- Selecting color function  
@@ -74,7 +76,7 @@ setTimeout(() => {
 }, 3500)
 
 
-// OPP 
+// OPP -- viewImg section's functions
 class Img {
   constructor(el) {
     this.cards = document.querySelectorAll(el.cards)
