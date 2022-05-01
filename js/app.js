@@ -10,7 +10,10 @@ window.addEventListener('DOMContentLoaded', () => {
     customModeBtn = document.querySelector('.btn__custom-mode'),
     upBtn = document.querySelector('.up__btn'),
     menuBtn = document.querySelector('.header__menu'),
-    nav = document.querySelector('.nav')
+    nav = document.querySelector('.nav'),
+    specialistSection = document.querySelector('.specialists'),
+    newsCard = document.querySelector('.news__card'),
+    footerSection = document.querySelector('.footer');
 
 
   // Header menu -- Open//Close functions
@@ -35,13 +38,16 @@ window.addEventListener('DOMContentLoaded', () => {
     modal.style.display = 'none'
     document.body.style.overflow = 'scroll'
   })
-  openModal()
+  // openModal()
 
 
   // Custom color mode -- Selecting color function  
   customModeBtn.addEventListener('click', () => {
-    let request = prompt('Rang kiriting')
+    let request = prompt('Enter your custom color')
     header.style.setProperty('--headerBg', `${request}`)
+    footerSection.style.setProperty('--section__bg', `${request}`)
+    specialistSection.style.setProperty('--text__color', `${request}`)
+    newsCard.style.setProperty('--white', `${request}`)
     card.forEach(element => {
       element.style.setProperty('--custom__card', `${request}`)
     });

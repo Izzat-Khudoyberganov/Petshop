@@ -1,5 +1,27 @@
+/* 1.Import additional files
+   2.Roots
+   3.General styles
+   4.Header section
+   5.Catalog section
+   6.Product section
+   7.Special product section
+   8.Specialists section
+   9. News section
+   10.Footer section
+   11.View section
+   12.Animations
+*/
+
+
+/* Import additional files */
+
+
 @import url(../node_modules/swiper/swiper-bundle.min.css);
 @import url(./font.css);
+
+
+/* Roots */
+
 
 :root {
   --MB: Monntserrat__Bold;
@@ -14,6 +36,10 @@
   --headerBg: linear-gradient(124.13deg, #F4CB38 10.97%, #F4A938 77.98%);
 }
 
+
+/* General styles */
+
+
 * {
   padding: 0;
   margin: 0;
@@ -24,6 +50,18 @@
 *::after,
 *::before {
   box-sizing: inherit;
+}
+
+*::-webkit-scrollbar {
+  width: 15px;
+  height: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 30px;
+  height: 20px;
+  background: var(--text__color);
+  border-radius: 10px;
 }
 
 *::selection {
@@ -45,6 +83,10 @@ a {
 section {
   padding: 100px 0;
 }
+
+
+/* Header section start */
+
 
 .loader {
   width: 100%;
@@ -90,16 +132,6 @@ section {
 
 .lds-ring div:nth-child(3) {
   animation-delay: -0.15s;
-}
-
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 
@@ -375,6 +407,10 @@ section {
 }
 
 
+/* Header section end */
+
+/* Catalog section start */
+
 .catalog {
   background: linear-gradient(180deg, #353537 0%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(0deg, #2D2D2D, #2D2D2D);
@@ -450,6 +486,10 @@ section {
   color: var(--text__color) !important;
 }
 
+
+/* Product section start */
+
+
 .product {
   background-color: #F5F8FF;
   display: block;
@@ -477,6 +517,10 @@ section {
   justify-content: center;
   align-items: center;
   transition: .5s;
+}
+
+.card__body {
+  padding: 0;
 }
 
 .card__light .card-body {
@@ -533,16 +577,13 @@ section {
   opacity: 1;
 }
 
+/* Product section end */
+
+/* Special product start */
+
 .special__product,
 .news {
   background-color: var(--darkwhite);
-}
-
-
-.special__product>.card__light {
-  width: 270px;
-  height: 400px;
-  background-color: var(--white);
 }
 
 .special__card {
@@ -584,7 +625,7 @@ section {
   justify-content: space-between;
   background-color: var(--text__color);
   color: var(--white);
-  width: 270px;
+  width: 100%;
   position: absolute;
   bottom: 0;
   height: 50px;
@@ -597,6 +638,11 @@ section {
   background-color: var(--yellow);
   color: var(--text__color);
   transition: .5s;
+}
+
+.special__card>.card-body {
+  padding: 0 10px;
+  justify-content: space-between;
 }
 
 /* Specialist section start */
@@ -619,24 +665,27 @@ section {
 .vet__card {
   max-width: 570px;
   width: 100%;
+  height: 230px;
   position: relative;
   margin: 0 auto;
   display: flex;
   background-color: #2E2E30;
-  /* background-color: var(--custom__card); */
   transition: .5s;
   flex-direction: row;
 }
 
 .vet__card:nth-child(1) {
-  /* margin-right: 30px; */
   margin-bottom: 30px;
+}
+
+
+.news__box {
+  gap: 50px;
 }
 
 .vet__card>img {
   width: 270px;
   height: auto;
-  margin-left: 20px;
 }
 
 .vet__card-info {
@@ -663,7 +712,8 @@ section {
   color: var(--white);
   font-family: var(--MR);
   font-size: 16px;
-  line-height: 20px;
+  width: 227px;
+  line-height: 120%;
   position: relative;
 }
 
@@ -685,7 +735,7 @@ section {
 }
 
 .vet__links {
-  margin-top: 23px;
+  margin-top: 18px;
 }
 
 
@@ -707,6 +757,9 @@ section {
 /* News section start  */
 
 .news__card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   max-width: 704px;
   width: 100%;
   height: 370px;
@@ -726,7 +779,7 @@ section {
   max-width: 310px;
   width: 100%;
   height: 310px;
-  display: block;
+  display: inline-block;
 }
 
 .news__card-info {
@@ -738,15 +791,17 @@ section {
   font-size: 28px;
   line-height: 34px;
   color: var(--text__color);
-  margin-bottom: 30px;
+  max-width: 298px;
+  width: 100%;
 }
 
 .news__card-inform {
   font-family: var(--MR);
   font-size: 14px;
   line-height: 27px;
-  letter-spacing: 0.03em;
   color: #878787;
+  max-width: 290px;
+  width: 100%;
 }
 
 .news__card-info>.btn__yellow {
@@ -766,15 +821,6 @@ section {
   position: relative;
 }
 
-.img__box:nth-child(odd) {
-  margin-right: 30px;
-}
-
-.img__box:nth-child(1),
-.img__box:nth-child(2) {
-  margin-bottom: 30px;
-}
-
 .img__box-item {
   width: 191px;
   height: 170px;
@@ -782,8 +828,13 @@ section {
 }
 
 .wrapper {
+  max-width: 410px;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+}
+
+.wrap:nth-child(1) {
+  margin-bottom: 30px;
 }
 
 .layer {
@@ -977,18 +1028,7 @@ section {
   color: var(--yellow);
 }
 
-*::-webkit-scrollbar {
-  width: 15px;
-  height: 5px;
-}
-
-body::-webkit-scrollbar-thumb {
-  width: 30px;
-  height: 20px;
-  background: var(--text__color);
-  border-radius: 10px;
-}
-
+/* View section start */
 .view {
   width: 100%;
   height: 100%;
@@ -1046,3 +1086,15 @@ body::-webkit-scrollbar-thumb {
 
 
 /* Footer section end */
+
+/* Animations  */
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

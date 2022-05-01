@@ -1,10 +1,11 @@
 @media(prefers-color-scheme:dark) {
-  :root{
+  :root {
     --white: var(--custom__bg);
     --text__color: #fff;
   }
-  .logo::before{
-    content:url(../img/dark-mode__logo.png)
+
+  .logo::before {
+    content: url(../img/dark-mode__logo.png)
   }
 
 }
@@ -19,17 +20,23 @@
     line-height: 120%;
     padding: 6px;
   }
-  .intro{
+
+  .intro {
     text-align: left;
     margin-top: 60px;
   }
-  .info__desc{
+
+  .info__desc {
     margin: 15px auto;
   }
 
   .title {
     font-size: 30px;
     line-height: 39px;
+  }
+  .news__box{
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -52,30 +59,35 @@
     z-index: 15;
   }
 
-  .modal__window{
+  .modal__window {
     left: 0;
     right: 0;
     bottom: 0;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .modal__window>img{
+
+  .modal__window>img {
     width: 200px;
   }
-  .modal__title{
+
+  .modal__title {
     font-size: 22px;
     line-height: 30px;
   }
-  .modal__button{
-      font-size: 14px;
-      line-height: 110%;
+
+  .modal__button {
+    font-size: 14px;
+    line-height: 110%;
   }
-  .modal__subtitle{
+
+  .modal__subtitle {
     font-size: 17px;
     line-height: 120%;
     text-align: center;
     width: 100%;
   }
+
   .nav.active {
     top: 25%;
   }
@@ -117,10 +129,18 @@
 
 }
 
+@media(max-width:991px){
+  .news__card{
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 @media(max-width:768px) {
-  section{
+  section {
     padding: 30px 0;
   }
+
   .user__action {
     display: none;
   }
@@ -130,120 +150,203 @@
     right: 10%;
     width: 80%;
   }
+
   .nav.active {
     top: 15%;
   }
+
+  .carousel-indicators {
+    display: none;
+  }
+
   .subtitle,
-  .catalog__sub{
+  .catalog__sub {
     font-size: 30px;
   }
-  .catalog__sub{
+
+  .catalog__sub {
     margin-bottom: 20px;
   }
-  
+
   .vet__card {
     padding: 10px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 75%;
+    height: auto;
   }
 
-  .vet__card:nth-of-type(last){
+  .vet__card:nth-of-type(last) {
     margin-bottom: 20px;
   }
 
-  .vet__card>img{
+  .vet__card>img {
     margin-left: 0;
   }
 
-  .vet__box{
+  .vet__box {
     gap: 30px;
   }
 
   .vet__name,
   .vet__position,
   .vet__info,
-  .vet__links{
+  .vet__links {
     text-align: center;
   }
 
-  .vet__name{
+  .vet__name {
     margin-top: 15px;
   }
 
-  .vet__info{
+  .vet__info {
     font-size: 14px;
     line-height: 100%;
   }
 
-  .vet__links{
+  .vet__links {
     margin-top: 10px;
   }
-  .card__info{
+
+  .card__info {
     justify-content: center;
   }
-  .info__text{
+
+  .info__text {
     text-align: center;
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 110%;
   }
+
+  .special__card-text {
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    width: 80%;
+    margin: 10px;
+  }
+  .news__card{
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+  }
+  .news__card-title{
+    margin-top: 15px;
+  }
+  .news__card-info{
+    margin-left: 0;
+  }
+  .wrap:nth-child(1){
+    margin-bottom: 0;
+  }
 }
 
 @media(max-width:600px) {
-  .main__btn{
+  .main__btn {
     padding: 15px 40px;
   }
-  .info__desc{
+
+  .info__desc {
     margin: 15px auto;
   }
-  .carousel-indicators{
+
+  .carousel-indicators {
     display: none;
   }
-  .card__light{
+
+  .card__light {
     margin: 10px 0;
     height: 300px;
     width: 250px;
   }
-  .card__text{
+
+  .card__text {
     margin-bottom: 0;
   }
-  .btn__yellow{
+
+  .btn__yellow {
     margin-top: 20px;
     font-size: 14px;
   }
-  .card__img{
+
+  .card__img {
     margin: 0;
   }
+
+
+  .catalog__card {
+    height: 370px !important;
+  }
+
+  .card-text {
+    margin-top: 10px !important;
+  }
+
+  .special__card {
+    height: 350px;
+  }
+  
+  .subtext{
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 110%;
+  }
 }
-@media(max-width: 400px){
-  .title{
+@media (max-width:500px) {
+  .wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media(max-width: 400px) {
+  .title {
     font-size: 25px;
     line-height: 120%;
   }
-  .logo{
+
+  .logo {
     width: 100px;
     display: block;
   }
+
   .subtitle,
   .catalog__sub {
     font-size: 20px;
   }
-  .info__desc{
+
+  .info__desc {
     margin-top: 0;
   }
-  .main__btn{
+
+  .main__btn {
     padding: 10px 25px;
   }
-  .info__text{
+
+  .info__text {
     font-size: 16px;
     line-height: 100%;
     margin-bottom: 20px;
     text-align: center;
   }
 
-  .vet__card>img{
+  .vet__card>img {
     width: 200px;
+  }
+
+  .card-text {
+    margin-top: 10px !important;
+  }
+
+  .catalog__card {
+    height: 370px !important;
+  }
+
+  .subtext {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 100%;
   }
 }
